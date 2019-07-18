@@ -9,7 +9,6 @@ function createWindow() {
     win.on('closed', function () { win = null; });
 }
 electron_1.app.on('ready', function () {
-    console.log('app นะ ready แล้วนะ');
     createWindow();
 });
 // สำหรับ macOS 

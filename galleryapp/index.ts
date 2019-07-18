@@ -1,17 +1,16 @@
 import { app, BrowserWindow } from 'electron'
 
-let win:BrowserWindow | null = null
+let win = null
 
 function createWindow() {
-  win = new BrowserWindow({width: 500, height: 400})
+  win = new BrowserWindow({width: 800, height: 600})
   win.setTitle('CSUBU Lecturers')
   win.loadFile('index.html')
   win.on('closed', () => { win = null })
 }
 
 app.on('ready', () => {
-    console.log('app นะ ready แล้วนะ')
-    createWindow();
+    createWindow()
 })
 
 // สำหรับ macOS 
