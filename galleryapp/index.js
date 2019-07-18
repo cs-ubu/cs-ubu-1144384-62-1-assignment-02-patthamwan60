@@ -9,6 +9,7 @@ function createWindow() {
     win.on('closed', function () { win = null; });
 }
 electron_1.app.on('ready', function () {
+    console.log('app is ready');
     createWindow();
 });
 // สำหรับ macOS 
@@ -20,6 +21,7 @@ electron_1.app.on('window-all-closed', function () {
 });
 // ถ้ากด icon ของ app ใหม่
 electron_1.app.on('activate', function () {
+    console.log('เปิด activate แล้วนะ ');
     if (win == null) {
         createWindow();
     }
